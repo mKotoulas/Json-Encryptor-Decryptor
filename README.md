@@ -1,5 +1,5 @@
 # Json-Encryptor-Decryptor
-Code snippets to encrypt JSON data in node.js with crypto and decrypt them in javascript using crypto-js. The encryption method being used is aes-256 under CBC mode. 
+Code snippets to encrypt JSON data in node.js with crypto and decrypt them in javascript using crypto-js. The encryption method being used is aes-256 under CBC mode using a random iv vector while the encrypted JSON is then encoded in a base-64 string   
 
 # What it does
 When working on a new service, it is a common need to simulate all HTTP(s) available methods your under-construction server is going to handle. While browsers are an option to simulate GET requests,  unless you use some extension, they don't typically provide an interface to do the same with the other methods. A widely used tool for cases like that is POSTMAN. Apart from that functionality, POSTMAN lets you code scripts that execute right before sending the request to the server or right after the response from the server has been received which extends the use cases of the tool. 
