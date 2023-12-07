@@ -3,6 +3,12 @@ Code snippets to encrypt JSON data in node.js with crypto and decrypt them in ja
 
 # What it does
 When working on a new service, it is a common need to simulate all HTTP(s) available methods your under-construction server is going to handle. While browsers are an option to simulate GET requests unless you use some extension, don't provide an interface to do the same with the other methods. A widely used tool for cases like that is POSTMAN. Apart from that functionality, POSTMAN lets you code scripts that execute right before or right after the request to the server is done which extends the use cases of the tool. 
+
+
+
+
+
+
 While not a necessity under HTTPS connections, you may want to encrypt the data being exchanged between server and client either because you use HTTP protocol instead of HTTPS or because you want to add an extra layer of protection, or because you are interested not only in security over the network but also in security in both ends. I added a little bit to that part in the next section. 
 
 
