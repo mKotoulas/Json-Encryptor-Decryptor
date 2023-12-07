@@ -5,17 +5,7 @@ Code snippets to encrypt JSON data in node.js with crypto and decrypt them in ja
 When working on a new service, it is a common need to simulate all HTTP(s) available methods your under-construction server is going to handle. While browsers are an option to simulate GET requests unless you use some extension, don't provide an interface to do the same with the other methods. A widely used tool for cases like that is POSTMAN. Apart from that functionality, POSTMAN lets you code scripts that execute right before or right after the request to the server is done which extends the use cases of the tool. 
 
 
-
-
-
-
 While not a necessity under HTTPS connections, you may want to encrypt the data being exchanged between server and client either because you use HTTP protocol instead of HTTPS or because you want to add an extra layer of protection, or because you are interested not only in security over the network but also in security in both ends. I added a little bit to that part in the next section. 
-
-
-
-
-
-
 
 The above scenario can be implemented using a great variety of frameworks, tools, programming languages, and encryption algorithms combinations. The snippets in this repo, demo how you can implement the functionality of encrypting a JSON object, which is a very common type of a response or request body, both on the client and the server side, using the symmetric aes-256 encryption algorithm under the CBC mode with the server being in an express server and the client side being simulated by the POSTMAN tool described in the above paragraph.     
 
