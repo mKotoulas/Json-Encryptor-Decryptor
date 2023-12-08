@@ -24,6 +24,20 @@ When using an HTTPS connection between a client and a service, data being transm
 On the other hand, when using an HTTP connection in the above scenario, no encryption of the data is being used by the protocol itself meaning that data travel over the network in plain text making them directly accessible to a third party that monitors the communication between the server and the client. When using HTTP protocol, encryption of the data, if needed, should be manually added by the programmer.
 
 # Usage of the snippets 
-With that being said, the usage of this repo snippets seems to have not a practical use not to mention that they add additional overhead to both sides as a result of the encryption-decryption processes.     
+With that being said, the usage of this repo snippet's seems to have not a practical use since HTTPS offers the same functionality , not to mention that they add additional overhead to both sides as a result of the encryption-decryption processes.
+However it is important to understand that HTTPS encryption mechanisms are keeping data safe when in transition between the two ends which is a different thing from keeping data secure when they rest in one end. It is also a simplification to assume that there are no additional nodes of communication between the server and the client and if this is the case, data will be decrypted - encrypted in each node. Another thing that may be a problem is the internal traffic between the load balancer and the server where data are in a transit state and not encrypted.
+
+
+To reach a point without going deeper in the details , when using HTTPS connections between clients and servers there are still points of attacks in the communication cycle i.e points where the data are being stored or transmitted without being encrypted.
+
+
+
+
+
+The main reason why someone may goes with the option to further encrypt data to be transmitted over the  network under an HTTPS connection is the concern of data security not only when they are in transition but also when they rest in one end (end to end). 
+Furthermore , a thing to consider is that data will be decrypted and encrypted  
+
+ 
+
 
 
