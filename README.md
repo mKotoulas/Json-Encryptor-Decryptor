@@ -21,7 +21,14 @@ Conversely, when using an HTTP connection in the same scenario, the protocol its
 
 
 # Usage of the snippets 
-With that being said, the usage of this repo snippet's seems to have not a practical use since HTTPS offers the same functionality , not to mention that they add additional overhead to both sides as a result of the encryption-decryption processes.
+With that said, the snippets in this repository may not have practical use, given that HTTPS already provides similar functionality, albeit with added overhead due to encryption-decryption processes on both ends.
+
+However, it's crucial to recognize that HTTPS encryption ensures data security during transmission between the two ends, which is distinct from safeguarding data when it is at rest in one end. Assuming there are no additional communication nodes between the server and client is a simplification, and if present, data may undergo decryption-encryption processes at each node. Additionally, internal traffic between the load balancer and the server poses a potential vulnerability, as data is in a transit state and not encrypted.
+
+Without delving into detailed intricacies, it's essential to acknowledge that even with HTTPS connections between clients and servers, there remain points of vulnerability in the communication cycle, where data may be stored or transmitted without encryption.
+
+End-to-end encryption, encrypting data at the point of creation and only decrypting it at the point of use, irrespective of the underlying network protocol, addresses these concerns. The code snippets in this repository aim to facilitate this approach using the setup outlined in the previous section.
+
 
 
 
