@@ -13,15 +13,12 @@ The encryption/decryption processes on the server side are implemented using the
 
 
 # HTTPS vs HTTP
-When establishing an HTTPS connection between a client and a service, the data being transmitted undergoes encryption through protocols such as TLS. This encryption ensures that any third party attempting to monitor the communication is unable to decrypt and comprehend the transmitted data. The HTTPS handshake, which occurs before any actual data is exchanged, involves the negotiation of encryption keys and certificates between the client and server. Consequently, no plain data is sent over the network during this process. Decrypting the exchanged data would require access to the information generated in the handshake phase, implying control over the network, the client, or server, and potentially the ability to reroute the connection. In general, HTTPS is considered secure during data transmission, and in most cases, no additional encryption is deemed necessary.
+When establishing an HTTPS connection between a client and a service, the data being transmitted undergoes encryption through protocols such as TLS. This encryption ensures that any third party attempting to monitor the communication is unable to decrypt and comprehend the transmitted data. The HTTPS handshake, which occurs before any actual data is exchanged, involves the negotiation of encryption keys and certificates between the client and server. Consequently, no plain data is sent over the network during this process. Decrypting the exchanged data would require access to the information generated in the handshake phase, implying control over the network the client or the server is running on, and potentially the ability to reroute the connection. In general, HTTPS is considered secure during data transmission, and in most cases, no additional encryption is deemed necessary.
 
 Conversely, when using an HTTP connection in the same scenario, the protocol itself does not provide data encryption. As a result, information travels over the network in plain text, making it directly accessible to any third party monitoring the communication between the server and the client. In situations where encryption is necessary, such as when using the HTTP protocol, it becomes the responsibility of the programmer to manually implement additional encryption measures.
 
 
 
-
-
-On the other hand, when using an HTTP connection in the above scenario, no encryption of the data is being used by the protocol itself meaning that data travel over the network in plain text making them directly accessible to a third party that monitors the communication between the server and the client. When using HTTP protocol, encryption of the data, if needed, should be manually added by the programmer.
 
 # Usage of the snippets 
 With that being said, the usage of this repo snippet's seems to have not a practical use since HTTPS offers the same functionality , not to mention that they add additional overhead to both sides as a result of the encryption-decryption processes.
