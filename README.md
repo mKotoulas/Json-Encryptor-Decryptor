@@ -21,9 +21,9 @@ Conversely, when using an HTTP connection in the same scenario, the protocol its
 
 
 # Usage of the snippets 
-With that said, the snippets in this repository may not have practical use, given that HTTPS already provides similar functionality, albeit with added overhead due to encryption-decryption processes on both ends.
+With that said the snippets in this repository may not have a practical use, given that HTTPS already provides similar functionality, albeit with added overhead due to encryption-decryption processes on both ends.
 
-However, it's crucial to recognize that HTTPS encryption ensures data security during transmission between the two ends, which is distinct from safeguarding data when it is at rest in one end. Assuming there are no additional communication nodes between the server and client is a simplification, and if present, data may undergo decryption-encryption processes at each node. Additionally, internal traffic between the load balancer and the server poses a potential vulnerability, as data is in a transit state and not encrypted.
+However, it's crucial to recognize that HTTPS encryption ensures data security during transmission between the two ends, which is distinct from safeguarding data when it is at rest on one end. Assuming there are no additional communication nodes between the server and client is a simplification, and if present, data may undergo decryption-encryption processes at each node. Additionally, internal traffic between the load balancer and the server poses a potential vulnerability, as data is in a transit state and not encrypted.
 
 Without delving into detailed intricacies, it's essential to acknowledge that even with HTTPS connections between clients and servers, there remain points of vulnerability in the communication cycle, where data may be stored or transmitted without encryption.
 
@@ -32,12 +32,7 @@ End-to-end encryption, encrypting data at the point of creation and only decrypt
 
 
 
-However it is important to understand that HTTPS encryption mechanisms are keeping data safe when in transition between the two ends which is a different thing from keeping data secure when they rest in one end. It is also a simplification to assume that there are no additional nodes of communication between the server and the client and if this is the case, data will be decrypted - encrypted in each node. Another thing that may be a problem is the internal traffic between the load balancer and the server where data are in a transit state and not encrypted.
 
-
-To reach a point without going deeper in the details , when using HTTPS connections between clients and servers there are still points of attacks in the communication cycle i.e points where the data are being stored or transmitted without being encrypted.
-
-Encrypting data to be transmitted in the time of their creation and only decrypting that data at the point of use , regardless of the underlying network protocol , is called end-to-end encryption and the code snippets in this repo attempt to help in that direction using the setup stated in the above section. 
 
 # How to use
 
